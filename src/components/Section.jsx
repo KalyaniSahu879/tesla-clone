@@ -76,9 +76,11 @@ const Section = ( {title , desc , image ,leftBtnTxt , rightBtnTxt} ) => {
                     <LeftButton>
                         {leftBtnTxt}
                     </LeftButton>
+                    {rightBtnTxt && 
                     <RightButton>
                         {rightBtnTxt}
                     </RightButton>
+                    }
                 </ButtonGroup>
                 <DownArrow src='/images-tesla/images/down-arrow.svg' />
             </Buttons>

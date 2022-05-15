@@ -35,6 +35,20 @@ const Home = () => {
             rightBtnTxt = 'Existing inventory'
         
         />
+        <Section
+            title="Lowest Cost Solar Panel in America"
+            desc="Money-back guarantee"
+            image="/images-tesla/images/solar-panel.jpg"
+            leftBtnTxt = 'Order now'
+            rightBtnTxt = 'Learn more'
+        
+        />
+        <Section
+            title="Accessories"
+            desc=""
+            image="/images-tesla/images/accessories.jpg"
+            leftBtnTxt = 'Shop now'
+        />
         
         
     </Container>
