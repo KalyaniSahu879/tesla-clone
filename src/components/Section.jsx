@@ -1,8 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 //import ButtonGroup from './ButtonGroup';
+import Fade from 'react-reveal/Fade';
+
 
 const Wrap = styled.div`
+    z-index:10;
     width: 100 vw;
     height: 100vh;
     background:orange;
@@ -13,7 +16,7 @@ const Wrap = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: ${props=>`url(${props.bgImg})`};
+    background-image: ${props => `url(${props.bgImg})`};
 `
 
 const ItemText = styled.div`
@@ -63,25 +66,30 @@ const Buttons = styled.div`
     
 `
 
-const Section = ( {title , desc , image ,leftBtnTxt , rightBtnTxt} ) => {
+const Section = ({ title, desc, image, leftBtnTxt, rightBtnTxt }) => {
     return (
-        <Wrap bgImg = {image}>
-            <ItemText>
-                <h1>{title}</h1>
-                <p>{desc}</p>
-            </ItemText>
-            <Buttons>
+        <Wrap bgImg={image}>
+            <Fade bottom>
 
-                <ButtonGroup>
-                    <LeftButton>
-                        {leftBtnTxt}
-                    </LeftButton>
-                    {rightBtnTxt && 
-                    <RightButton>
-                        {rightBtnTxt}
-                    </RightButton>
-                    }
-                </ButtonGroup>
+                <ItemText>
+                    <h1>{title}</h1>
+                    <p>{desc}</p>
+                </ItemText>
+            </Fade>
+            <Buttons>
+                <Fade bottom>
+
+                    <ButtonGroup>
+                        <LeftButton>
+                            {leftBtnTxt}
+                        </LeftButton>
+                        {rightBtnTxt &&
+                            <RightButton>
+                                {rightBtnTxt}
+                            </RightButton>
+                        }
+                    </ButtonGroup>
+                </Fade>
                 <DownArrow src='/images-tesla/images/down-arrow.svg' />
             </Buttons>
         </Wrap>
